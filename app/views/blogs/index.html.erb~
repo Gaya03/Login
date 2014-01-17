@@ -1,0 +1,31 @@
+
+
+  <% @blogs.each do |blog| %>
+      
+<div class="media">
+  <a class="pull-left" href="#">
+    <img class="media-object" src="/images/1.jpg" alt="image">
+  </a>
+  <div class="media-body">
+    <h5 class="media-heading"><%= blog.name %></h5>
+    <div class="page-header">
+  <h4><%= blog.content %><small></small></h4>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_blog_path(blog), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      blog_path(blog),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+</div>
+  </div>
+
+
+      </div> 
+    <% end %>
+
+
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_blog_path,
+            :class => 'btn btn-primary' %>

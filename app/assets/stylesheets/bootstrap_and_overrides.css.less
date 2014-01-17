@@ -1,0 +1,54 @@
+@import "twitter/bootstrap/bootstrap";
+body{padding:60px}
+
+@import "twitter/bootstrap/responsive";
+
+// Set the correct sprite paths
+@iconSpritePath: image-url("twitter/bootstrap/glyphicons-halflings.png");
+@iconWhiteSpritePath: image-url("twitter/bootstrap/glyphicons-halflings-white.png");
+
+// Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
+@fontAwesomeEotPath: asset-url("fontawesome-webfont.eot");
+@fontAwesomeEotPath_iefix: asset-url("fontawesome-webfont.eot?#iefix");
+@fontAwesomeWoffPath: asset-url("fontawesome-webfont.woff");
+@fontAwesomeTtfPath: asset-url("fontawesome-webfont.ttf");
+@fontAwesomeSvgPath: asset-url("fontawesome-webfont.svg#fontawesomeregular");
+
+// Font Awesome
+@import "fontawesome/font-awesome";
+
+// Glyphicons
+//@import "twitter/bootstrap/sprites.less";
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/customize.html#variables for their names and documentation
+//
+// Example:
+// @linkColor: #ff0000;
+
+form-control:focus {
+    border-color: rgb(102, 175, 233);
+    outline: 0px none;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(102, 175, 233, 0.6);
+}
+.form-control {
+    display: block;
+    width: 60%;
+    height: 34px;
+    padding: 4px 10px;
+    font-size: 12px;
+    line-height: 1.42857;
+    color: rgb(85, 85, 85);
+    vertical-align: middle;
+    background-color: rgb(255, 255, 255);
+    background-image: none;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
